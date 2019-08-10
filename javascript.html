@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title> Javascript </title>
+	</head>
+	
+	<body>
+	
+	<button onclick="alert('Hi Phoenix!')"> Click here </button>
+	
+	<p id="text"> Hello Ananya! </p>
+	<button id="myButton"> Change Text </button>
+	<p id="secondPara"> Javascript is... </p>
+	<button id="secondButton"> Append text</button>
+	<p id="thirdPara"> </p>
+	<button id="thirdButton"> Click here</button>
+	<div id="fourthPara"> This is some more text</div>
+	<button id="fourthButton"> Click Here</button>
+	<script>
+	
+	document.getElementById("myButton").onclick = function() {
+	document.getElementById("secondPara").innerHTML = " Hello Phoenix!";
+	};
+	
+	document.getElementById("secondButton").onclick = function(){
+	document.getElementById("secondPara").innerHTML = "I know that" + document.getElementById("secondPara").innerHTML + "awesome";
+	};
+	
+	document.getElementById("thirdButton").onclick = function(){
+	document.getElementById("thirdPara").innerHTML = "Hello";
+	};
+	
+	document.getElementById("fourthButton").onclick = function(){
+	document.getElementById("fourthPara").style.backgroundColor = "Red";
+	};
+	</script>
+	
+	</body>
+	
+	
+</html>

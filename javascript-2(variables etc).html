@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title> Javascript-2(variables etc.) </title>
+	</head>
+	
+	<body>
+	<!-- <input type="text" id="textInput">
+	<button id="myButton">Click here</button>
+	<p id="text"> Hello there!</p>  
+	
+	<input id="magicWrd"> 
+	<button id= "magic"> Click Here </button>   -->
+	
+	<p> How many fingers am I holding? </p>
+	<input id="no_of_fing"> 
+	<button id="finger"> Count </button>
+	
+	<script type="text/javascript"> 
+	
+	
+	/* document.getElementById("myButton").onclick = function(){
+	var textline = "";
+	textline = document.getElementById("textInput").value;               //variables
+	document.getElementById("text").innerHTML = textline;
+	};
+	*/
+	
+	/*var myArray = new Array();
+	myArray[0] = "burger";
+	myArray[1] = "pizza";
+	alert(myArray[1]);
+	var tweets = ["Good morning", "I love coffee"];                   //array
+	tweets.push("Back to work");
+	console.log(tweets);
+	*/
+	
+	
+	/*document.getElementById("magic").onclick = function(){
+	var y = document.getElementById("magicWrd").value;
+	if(y == "Phoenix" || y == "phoenix"){
+	alert("You got it right!");
+	}                                                                  //if-else 
+	else 
+	alert("Sorry, try again");
+	
+	}
+	*/
+	document.getElementById("finger").onclick = function(){
+	var x = document.getElementById("no_of_fing").value;
+	var y = Math.floor((Math.random()*10)+1);
+	if (x == y){                                                               //How many fingers am I holding GAME.
+	alert("Hurrah! You are absolutely right!");
+	}
+	else 
+	alert("Sorry, I was holding " + y + " fingers!");
+	}
+	
+	
+	
+	</script>
+	
+	</body>
+</html>
+	

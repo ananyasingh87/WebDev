@@ -1,0 +1,61 @@
+<html>
+	<head> 
+		<title>Javascript(Loops,Func,proj) </title>
+	</head>
+	
+	<body>
+	
+	<!-- <div id="first"> </div>  -->
+	<div> How many fingers is the user holding?
+	<select id="no_of_fing"> 
+		
+		<option> 0 </option>
+		<option> 1 </option>
+		<option> 2 </option>
+		<option> 3 </option>
+		<option> 4 </option>
+		<option> 5 </option>
+	
+	</select>
+	<button id="user_fing"> Click here </button> 
+	</div>
+	
+	
+	<p id="com_count"> </p>
+	
+	
+		<script type="text/javascript">
+	
+	/*var i;
+	var j= "";                                                                            // to remove 'undefined' from the output.
+	var tweets = ["Merhaba", "Hallo", "Guten Morgen", "Gunaydin", "Guten Tag"];
+	for(i = 0; i<tweets.length; i++){
+	j = j + "<p>" + tweets[i] + "</p>";                                                //use of <p> tag to print the text in the next lines.
+	}
+	document.getElementById("first").innerHTML = j;
+	*/
+	document.getElementById("user_fing").onclick = function(){
+	
+	var a = document.getElementById("no_of_fing").value;            // a is no of fingers that user is holding.
+	                          
+	var c = false;
+	var counter = 1;
+	while(c == false){
+	
+	var b = Math.floor(Math.random()*6);                        // b stores the random or guessing numbers
+	
+	if(b == a){
+	c = true;
+	document.getElementById("com_count").innerHTML = "The computer guessed right! The no of guesses are" + counter;
+	
+	}
+	else
+	counter++;
+	}
+	}
+	
+		</script>
+		
+	</body>
+</html>
+	

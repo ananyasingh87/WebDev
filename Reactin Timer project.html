@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<title> Reaction Timer</title>
+		
+		<style type="text/css">
+		
+		#rec{
+		height:100px;
+		width:100px;
+	    position:relative;
+		display:none;
+		background-color:red;
+		}
+	
+	.para{
+	
+	font-weight:bold;
+	
+	}
+		</style>
+	
+	</head>
+	
+	<body>
+	<div>
+	<h1> Welcome to Reaction Tester!</h1>
+	<p> Click the figures appearing on the window as soon as possible.</p>
+	<p class = "para">You took <span id="timer"> </span> </p>
+	</div>
+	
+	<div id="rec"> </div>
+	
+	
+	<script type="text/javascript">
+	
+	var start = new Date().getTime();
+	
+	
+	Delay();	
+	function Appear(){
+	document.getElementById("rec").style.display = "block";           // for making the shape appear after it disappears
+	var top = Math.random()*300;
+	var left = Math.random()*300;
+	var width = (Math.random()*200) +100;
+	var height = (Math.random()*200) +100;
+	document.getElementById("rec").style.top = top + "px";
+	document.getElementById("rec").style.left = left + "px";
+	document.getElementById("rec").style.width = width + "px";
+	document.getElementById("rec").style.height = height + "px";
+	document.getElementById("rec").style.backgroundColor = RandomColor();
+	start = new Date().getTime();              // for starting the current time after each click
+	
+	
+	if(Math.random()>0.5){                   // for generating circles
+	document.getElementById("rec").style.borderRadius = "50%";
+	}
+	else
+	document.getElementById("rec").style.borderRadius = "0";
+	
+	}
+	
+	function Delay(){                         // for delay in the appearance of the shape
+	setTimeout(Appear, Math.random()*2000);
+	}
+	
+	function RandomColor(){                       //for random color of shape
+	var letters = "0123456789ABCDEFG".split('');              // for arranging the characters into array
+	var colour = "#";
+	for(var i=0; i<6; i++){
+	colour+= letters[Math.floor(Math.random()*16)];
+	}
+	return colour;
+	}
+	
+	
+	
+	
+	document.getElementById("rec").onclick = function(){                                   //for disappearing the shape
+			document.getElementById("rec").style.display = "none";
+			var end = new Date().getTime();
+			var time_taken = (end-start)/1000;
+			document.getElementById("timer").innerHTML = time_taken +"s";
+			
+			
+	
+	Appear();         // to make the shape reappear after it disappears
+		}
+		
+	</script>
+	
+	</body>
+	
+</html>
